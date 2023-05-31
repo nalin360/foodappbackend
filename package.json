@@ -1,0 +1,26 @@
+{
+  "name": "foodappbackend",
+  "version": "1.0.0",
+  "description": "ract native food application ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nalin360/foodappbackend.git"
+  },
+  "author": "Nalin Sahani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nalin360/foodappbackend/issues"
+  },
+  "homepage": "https://github.com/nalin360/foodappbackend#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.2.2"
+  }
+}

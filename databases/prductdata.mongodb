@@ -1,0 +1,108 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'mydatabase';
+// const collection = 'NEW_COLLECTION_NAME';
+
+// The current database to use.
+use(database);
+
+// Create a new collection.
+// db.createCollection(collection);
+
+db.products.insertMany([
+    {
+        name: "Shahi Paneer",
+        description: "A rich and creamy dish made with paneer (cottage cheese) in a tomato-based sauce with spices and cream.",
+        price: 90.99,
+        image: "../../assets/images/chicken AM.jpeg",
+        reviews: [
+            {
+                customerName: "Customer Name",
+                rating: 5,
+                comment: "Great food!"
+            }
+        ]
+    },
+    {
+        name: "Samosa",
+        description: "A fried or baked pastry with a savory filling, such as spiced potatoes, peas, onions, and sometimes meat.",
+        price: 14.99,
+        image: "../../assets/images/samosa.jpeg",
+        reviews: [
+            {
+                customerName: "Customer Name",
+                rating: 4,
+                comment: "Tasty!"
+            }
+        ]
+    },
+    {
+        name: "Chicken Biryani",
+        description: "A mixed rice dish with spices, chicken, and sometimes vegetables.",
+        price: 120.99,
+        image: "../../assets/images/chicken biryani .jpeg",
+        reviews: [
+            {
+                customerName: "Customer Name",
+                rating: 5,
+                comment: "Delicious!"
+            }
+        ]
+    },
+    {
+        name: "Egg and Bread",
+        description: "A simple dish made with eggs and bread, often served as a breakfast item.",
+        price: 50.99,
+        image: "../../assets/images/egg and bread .jpeg",
+        reviews: [
+            {
+                customerName: "Customer Name",
+                rating: 4,
+                comment: "Good breakfast option."
+            }
+        ]
+    },
+    {
+        name: "Noodles",
+        description: "A type of pasta made from wheat flour and water, often served with a sauce or in a soup.",
+        price: 70.99,
+        image: "../../assets/images/noddles.jpeg",
+        reviews: [
+            {
+                customerName: "Customer Name",
+                rating: 4,
+                comment: "Tasty noodles."
+            }
+        ]
+    }
+])
+
+// The prototype form to create a collection:
+/* db.createCollection( <name>,
+  {
+    capped: <boolean>,
+    autoIndexId: <boolean>,
+    size: <number>,
+    max: <number>,
+    storageEngine: <document>,
+    validator: <document>,
+    validationLevel: <string>,
+    validationAction: <string>,
+    indexOptionDefaults: <document>,
+    viewOn: <string>,
+    pipeline: <pipeline>,
+    collation: <document>,
+    writeConcern: <document>,
+    timeseries: { // Added in MongoDB 5.0
+      timeField: <string>, // required for time series collections
+      metaField: <string>,
+      granularity: <string>
+    },
+    expireAfterSeconds: <number>,
+    clusteredIndex: <document>, // Added in MongoDB 5.3
+  }
+)*/
+
+// More information on the `createCollection` command can be found at:
+// https://www.mongodb.com/docs/manual/reference/method/db.createCollection/

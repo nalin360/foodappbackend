@@ -15,7 +15,7 @@ db.products.insertMany([
         name: "Shahi Paneer",
         description: "A rich and creamy dish made with paneer (cottage cheese) in a tomato-based sauce with spices and cream.",
         price: 90.99,
-        image: "../../assets/images/chicken AM.jpeg",
+        image: "https://source.unsplash.com/_y6A9bhILkM",
         reviews: [
             {
                 customerName: "Customer Name",
@@ -28,7 +28,7 @@ db.products.insertMany([
         name: "Samosa",
         description: "A fried or baked pastry with a savory filling, such as spiced potatoes, peas, onions, and sometimes meat.",
         price: 14.99,
-        image: "../../assets/images/samosa.jpeg",
+        image: "https://source.unsplash.com/8T9AVksyt7s",
         reviews: [
             {
                 customerName: "Customer Name",
@@ -41,7 +41,7 @@ db.products.insertMany([
         name: "Chicken Biryani",
         description: "A mixed rice dish with spices, chicken, and sometimes vegetables.",
         price: 120.99,
-        image: "../../assets/images/chicken biryani .jpeg",
+        image: "https://source.unsplash.com/ysmeQt1dzcw",
         reviews: [
             {
                 customerName: "Customer Name",
@@ -54,7 +54,7 @@ db.products.insertMany([
         name: "Egg and Bread",
         description: "A simple dish made with eggs and bread, often served as a breakfast item.",
         price: 50.99,
-        image: "../../assets/images/egg and bread .jpeg",
+        image: "https://source.unsplash.com/FFqNATH27EM",
         reviews: [
             {
                 customerName: "Customer Name",
@@ -67,7 +67,7 @@ db.products.insertMany([
         name: "Noodles",
         description: "A type of pasta made from wheat flour and water, often served with a sauce or in a soup.",
         price: 70.99,
-        image: "../../assets/images/noddles.jpeg",
+        image: "https://source.unsplash.com/wEBg_pYtynw",
         reviews: [
             {
                 customerName: "Customer Name",
@@ -78,6 +78,61 @@ db.products.insertMany([
     }
 ])
 
+// -------------------------------------------------------------------
+// db.products.updateMany(
+//    { name: "Noodles" },
+//    {
+//      $set: {
+//        image: "https://example.com/new-image.jpg"
+//      }
+//    }
+// )
+
+// db.products.updateMany(
+//    { name: "Shahi Paneer" },
+//    {
+//      $set: {
+//        image: "https://source.unsplash.com/_y6A9bhILkM"
+//      }
+//    }
+// )
+
+// db.products.updateMany(
+//    { name: "Samosa" },
+//    {
+//      $set: {
+//        image: "https://source.unsplash.com/8T9AVksyt7s"
+//      }
+//    }
+// )
+
+// db.products.updateMany(
+//    { name: "Chicken Biryani" },
+//    {
+//      $set: {
+//        image: "https://source.unsplash.com/ysmeQt1dzcw"
+//      }
+//    }
+// )
+
+// db.products.updateMany(
+//    { name: "Egg and Bread" },
+//    {
+//      $set: {
+//        image: "https://source.unsplash.com/FFqNATH27EM"
+//      }
+//    }
+// )
+// db.products.updateMany(
+//    { name: "Noodles" },
+//    {
+//      $set: {
+//        image: "https://source.unsplash.com/wEBg_pYtynw"
+//      }
+//    }
+// )
+
+// -------------------------------------------------------------------
 // The prototype form to create a collection:
 /* db.createCollection( <name>,
   {

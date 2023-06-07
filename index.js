@@ -68,7 +68,7 @@ function generateToken(user) {
 
 app.post('/signup', async (req, res) => {
   try {
-    const { password, ...userData } = req.body;
+    const { password,  ...userData} = req.body;
 
     // Validate password field
     if (!password) {
@@ -148,8 +148,50 @@ app.get('/products', async (req, res) => {
   }
 });
 
-// ...
+// ... Manthan .....
+const OrderHistorySchema = new mongoose.Schema({
+  
+  username: String,
+  orders: [{
+    id: Number,
+    order_date: String,
+    productname: String,
+    productDesc: String,
+    productPrice: Number,
+    deliveryStatus: String
+  }]
+});
+const manthan = mongoose.model('orderHistory', OrderHistorySchema);
 
+
+app.use(express.json());
+
+// Check if 'app' already has the '_router' property
+const existingApp = app._router;
+
+// If 'app' is already defined, use it; otherwise, create a new instance
+// const server = existingApp ? app : express()
+
+const OrderHistory = mongoose.model('orderHistory', OrderHistorySchema);
+
+// Define the POST route for creating a new order
+app.post('/orderHistory', async (req, res) => {
+  try {
+    // Create a new order based on the request body
+    const newOrder = {
+      username: req.body.username,
+      orders: req.body.orders
+    };
+
+    // Save 
+    const order = await OrderHistory.create(newOrder);
+
+    res.json(order);
+  } catch (error) {
+    console.error('Error creating order:', error);
+    res.status(500).json({ error: 'Failed to create order' });
+  }
+});
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
